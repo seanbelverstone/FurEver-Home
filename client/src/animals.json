@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "Garfield",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg",
+      "type": "Cat",
+      "gender": "Male",
+      "description": "Loves lasagna, hates Mondays",
+      "spayed_neutered": "Yes",
+      "shots_current": "Yes",
+      "children": "No",
+      "email": "jarbuckle@boringville.org",
+      "phone": "(555)123-4567"
+    }
+]
