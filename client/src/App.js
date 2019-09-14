@@ -6,11 +6,10 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <Jumbotron>
-        
-      </Jumbotron>
+      <Jumbotron />
     );
   }
 }
 
 export default App;
+
