@@ -11,6 +11,7 @@ const mainJumbotron = (props) => {
 				<Container fluid>
 					<h1 className="display-3">FurEver Home</h1>
 					<p className="lead">Find your next best friend</p>
+					{/* This button needs to float to the right */}
 					<Button id="login" color="primary">Login</Button>
 				</Container>
 			</Jumbotron>
