@@ -17,10 +17,11 @@ class App extends Component {
   render() {
     return (
 
-      <Jumbotron />
       
-      <React.Fragment>
-        <div id="cardarea">
+      
+      <React.Fragment>+
+        <Jumbotron />
+        <div class="charCard">
         {this.state.animal.map(animal => (
           <CharCard
            { ...animal }
