@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import logo from "./logo.svg";
+import Jumbotron from "./components/jumbotron"
 import "./App.css";
 import animal from "../src/animals.json";
 import CharCard from "./components/datacard.js";
@@ -16,6 +16,9 @@ class App extends Component {
 
   render() {
     return (
+
+      <Jumbotron />
+      
       <React.Fragment>
         <div id="cardarea">
         {this.state.animal.map(animal => (
@@ -50,8 +53,10 @@ class App extends Component {
         </p>
       </div> */}
       </React.Fragment>
+    
     );
   }
 }
 
 export default App;
+
