@@ -39,15 +39,11 @@ class ModalExample extends React.Component {
 
 				</Form>
 				<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} backdrop={this.state.backdrop}>
-					<ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+					<ModalHeader toggle={this.toggle}>Login to your account</ModalHeader>
 					<ModalBody>
-            {/* This login is the email/password login form */}
-            <Login />
+						{/* This login component is the email/password login form */}
+						<Login />
 					</ModalBody>
-					<ModalFooter>
-						<Button color="primary" onClick={this.toggle}>Do Something</Button>{" "}
-						<Button color="secondary" onClick={this.toggle}>Cancel</Button>
-					</ModalFooter>
 				</Modal>
 			</div>
 		);
