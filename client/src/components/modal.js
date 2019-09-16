@@ -35,7 +35,7 @@ class ModalExample extends React.Component {
 			<div>
 				<Form inline onSubmit={(e) => e.preventDefault()}>
 
-					<Button color="primary" onClick={this.toggle}>{this.props.buttonLabel}Login</Button>
+					<Button id="modalButton" color="primary" onClick={this.toggle}>{this.props.buttonLabel}Login</Button>
 
 				</Form>
 				<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} backdrop={this.state.backdrop}>
