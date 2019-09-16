@@ -6,6 +6,7 @@ export default class Login extends React.Component {
 
 	constructor (props) {
 		super(props);
+		// Defines the form's values as a state that will change
 		this.state = {
 			formControls: {
 				email: {
@@ -17,10 +18,12 @@ export default class Login extends React.Component {
 			}
 		};
   
+		// Binding this for the two functions so React knows what 'this' is
 		this.changeHandler = this.changeHandler.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
 	}
 
+	// Setting state for the values
 	changeHandler(event) {
       
 		const name = event.target.name;
@@ -38,12 +41,13 @@ export default class Login extends React.Component {
 		});
 	}
 
+	// Submit button function, which sets the email/password values and closes the modal
 	onSubmit() {
 		const email = this.state.formControls.email.value;
 		const password = this.state.formControls.password.value;
 		console.log("Email:" + email);
-    console.log("Password: "+ password);
-    this.props.closeModal();
+		console.log("Password: "+ password);
+		this.props.closeModal();
 	}
 
 	render() {

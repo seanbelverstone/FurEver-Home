@@ -42,6 +42,7 @@ class ModalExample extends React.Component {
 					<ModalHeader toggle={this.toggle}>Login to your account</ModalHeader>
 					<ModalBody>
 						{/* This login component is the email/password login form */}
+						{/* Passing the closeModal function from login.js */}
 						<Login closeModal={() => this.setState({modal: false})}/>
 					</ModalBody>
 				</Modal>
