@@ -19,6 +19,7 @@ body {
   background: url("./images/jumbotronBackground.png");
   background-position-x: left;
   background-repeat: no-repeat;
+  background-color: azure;
 }
 
 #modalButton {
