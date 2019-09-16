@@ -2,11 +2,8 @@ import React from "react";
 import "./cardstyle.css";
 // import animal from "../../src/animals.json";
 
-
-
 function CharCard(props) {
 	return (
-
 		<React.Fragment>
 			{/* Inserting props.id as an argument for the RemoveChar function, so we can specifically tell it which ID to be removing, i.e. the thing we just clicked on */}
 

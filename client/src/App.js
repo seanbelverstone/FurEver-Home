@@ -26,7 +26,7 @@ class App extends Component {
           <CharCard
            { ...animal }
             // id={animal.id}
-            // key={animal.id}
+            key={animal.id}
             // name={animal.name}
             // image={animal.image}
             // type={animal.type}
