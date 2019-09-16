@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import Jumbotron from "./components/jumbotron"
+import Jumbotron from "./components/jumbotron";
+import Modal from "./components/modal";
 import "./App.css";
 import animal from "../src/animals.json";
 import CharCard from "./components/datacard.js";
@@ -16,10 +18,9 @@ class App extends Component {
 
   render() {
     return (
-
-      <Jumbotron />
-      
       <React.Fragment>
+        <Jumbotron />
+      
         <div id="cardarea">
         {this.state.animal.map(animal => (
           <CharCard

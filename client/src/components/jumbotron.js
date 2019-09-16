@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import {Jumbotron, Button, Container} from "reactstrap";
+import Modal from "./modal";
 import "../App.css";
 
 const mainJumbotron = (props) => {
@@ -12,7 +13,7 @@ const mainJumbotron = (props) => {
 					<h1 className="display-3">FurEver Home</h1>
 					<p className="lead">Find your next best friend</p>
 					{/* This button needs to float to the right */}
-					<Button id="login" color="primary">Login</Button>
+					<Modal>Login</Modal>
 				</Container>
 			</Jumbotron>
 		</div>
