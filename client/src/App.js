@@ -18,10 +18,9 @@ class App extends Component {
 
   render() {
     return (
-
-      <Jumbotron />
-      
       <React.Fragment>
+        <Jumbotron />
+      
         <div id="cardarea">
         {this.state.animal.map(animal => (
           <CharCard
