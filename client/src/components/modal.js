@@ -42,7 +42,7 @@ class ModalExample extends React.Component {
 					<ModalHeader toggle={this.toggle}>Login to your account</ModalHeader>
 					<ModalBody>
 						{/* This login component is the email/password login form */}
-						<Login />
+						<Login closeModal={() => this.setState({modal: false})}/>
 					</ModalBody>
 				</Modal>
 			</div>
