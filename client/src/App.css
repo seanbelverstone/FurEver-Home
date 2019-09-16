@@ -1,24 +1,30 @@
-.App {
+/* font-family: 'Roboto', sans-serif;
+            HEADINGS
+
+font-family: 'Poppins', sans-serif; 
+            MAIN TEXT*/
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url("./images/background.jpg");
+  background-repeat: no-repeat;
+}
+
+#jumbotron {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  background: url("./images/jumbotronBackground.png");
+  background-position-x: left;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#modalButton {
+  position: absolute;
+  left: 80%;
+  z-index: 0;
+  width: 200px;
+  font-size: 20px;
 }
