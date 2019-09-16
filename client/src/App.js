@@ -1,8 +1,18 @@
 import React, { Component } from "react";
-import Jumbotron from "./components/jumbotron"
+import Jumbotron from "./components/jumbotron";
 import "./App.css";
 import animal from "../src/animals.json";
 import CharCard from "./components/datacard.js";
+
+const apiUser = process.env.apiUser;
+const apiKey = process.env.apiKey;
+const API_KEY = process.env.REACT_APP_FUREVER_HOME_API_KEY;
+
+const url = "https://api.petfinder.com/v2/oauth2/token?grant_type=client_credentials&client_id=" + apiUser + "&client_secret=" + apiKey + "4pcDx02VBYwJBPWpTFmC4H9iPE9k39YSjUEVffDY";
+console.log("Query url is: " + url);
+console.log("apiUser is: " + apiUser);
+console.log("apiKey is: " + apiKey);
+console.log("API_KEY IS: " + API_KEY);
 
 class App extends Component {
   // Setting this.state.chars to the chars json array
@@ -13,15 +23,35 @@ class App extends Component {
     favArray: []
   };
 
+  //  ================================================================
+  //  ================================================================
+  // var movie = "Mr. Nobody";
+  // var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+
+
+  // $.ajax({
+  //   url: queryURL,
+  //   method: "GET"
+  // }).then(function(response) {
+  //   // Create a new table row element
+  //   console.log(response);
+  // });
+  //  ================================================================
+  //  ================================================================
+
+
+
 
   render() {
+
+
     return (
 
       
       
-      <React.Fragment>+
+      <React.Fragment>
         <Jumbotron />
-        <div class="charCard">
+        <div className="charCard">
         {this.state.animal.map(animal => (
           <CharCard
            { ...animal }
@@ -44,12 +74,12 @@ class App extends Component {
         </div>
 
 
-      {/* <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      {/* <div classNameName="App">
+        <div classNameName="App-header">
+          <img src={logo} classNameName="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
+        <p classNameName="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div> */}
