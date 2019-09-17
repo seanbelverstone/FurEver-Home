@@ -52,7 +52,10 @@ export default class Login extends React.Component {
 		console.log("Name: " + username);
 		console.log("Email:" + email);
 		console.log("Password: "+ password);
-		this.props.closeModal();
+    this.props.closeModal();
+    
+    // AXIOS call to the api 
+
 	}
 
 	render() {
@@ -61,7 +64,7 @@ export default class Login extends React.Component {
 
 				<FormGroup>
 					<Input 
-						type="name" 
+						type="text" 
 						name="username" 
 						id="username" 
 						placeholder="Your Name" 
