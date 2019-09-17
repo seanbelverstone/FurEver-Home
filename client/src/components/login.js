@@ -46,10 +46,10 @@ export default class Login extends React.Component {
 
 	// Submit button function, which sets the email/password values and closes the modal
 	onSubmit() {
-    const username = this.state.formControls.username.value;
+		const username = this.state.formControls.username.value;
 		const email = this.state.formControls.email.value;
-    const password = this.state.formControls.password.value;
-    console.log("Name: " + username);
+		const password = this.state.formControls.password.value;
+		console.log("Name: " + username);
 		console.log("Email:" + email);
 		console.log("Password: "+ password);
 		this.props.closeModal();
