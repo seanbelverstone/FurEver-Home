@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Button, Form, FormGroup, Input } from "reactstrap";
+const db = {};
 
 export default class Login extends React.Component {
 
@@ -9,6 +10,9 @@ export default class Login extends React.Component {
 		// Defines the form's values as a state that will change
 		this.state = {
 			formControls: {
+				username: {
+					value: ""
+				},
 				email: {
 					value: ""
 				},
@@ -43,26 +47,67 @@ export default class Login extends React.Component {
 
 	// Submit button function, which sets the email/password values and closes the modal
 	onSubmit() {
+		const username = this.state.formControls.username.value;
 		const email = this.state.formControls.email.value;
 		const password = this.state.formControls.password.value;
+		console.log("Name: " + username);
 		console.log("Email:" + email);
 		console.log("Password: "+ password);
 		this.props.closeModal();
+    
+		// AXIOS call to the api using sequelize
+		//if user is in database, don't do anything right now
+		//if user is not in the database, create new user 
+    
+		//Does this need to be here?
+		if (username) {
+			fetch("/api/users", {
+				method: "POST",
+				body: {
+					name: username,
+					email: email,
+					password: password 
+				},
+				headers: {
+					"Content-Type": "application/json"
+				}
+			})
+				.then(function(response) {      
+					return response.text();
+				}, function(error) {
+					throw (error); //=> String
+				});
+          
+		} else {
+			console.log("You already have an account");
+		}
+
 	}
 
 	render() {
 		return (
 			<Form>
+
+				<FormGroup>
+					<Input 
+						type="text" 
+						name="username" 
+						id="username" 
+						placeholder="Your Name" 
+						value={this.state.formControls.username.value} 
+						onChange={this.changeHandler} />
+				</FormGroup>
+
 				<FormGroup>
 					<Input 
 						type="email" 
 						name="email" 
-						id="name" 
+						id="email" 
 						placeholder="Email" 
 						value={this.state.formControls.email.value} 
 						onChange={this.changeHandler} />
-
 				</FormGroup>
+
 				<FormGroup>
 					<Input 
 						type="password" 
@@ -71,9 +116,10 @@ export default class Login extends React.Component {
 						placeholder="Password"
 						value={this.state.formControls.password.value} 
 						onChange={this.changeHandler} />
-            
 				</FormGroup>
+
 				<Button onClick={this.onSubmit}>Submit</Button>
+        
 			</Form>
 		);
 	}
