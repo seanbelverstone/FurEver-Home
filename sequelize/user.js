@@ -1,8 +1,20 @@
-const sequelize = require("./database");
+let sequelize;
 const Sequelize = require("sequelize");
+const config = require("../client/config");
+
+if (config.use_env_variable) {
+	sequelize = new Sequelize(process.env[config.use_env_variable]);
+} else {
+	sequelize = new Sequelize(
+		config.database,
+		config.username,
+		config.password,
+		config
+	);
+}
 
 const User = sequelize.define("user", {
-	// attributes ** THIS WILL NEED TO BE UPDATED CONTINGENT ON HOW SEAN CREATES TABLE
+
 	name: {
 		type: Sequelize.STRING,
 		allowNull: false
@@ -16,8 +28,6 @@ const User = sequelize.define("user", {
 		type: Sequelize.STRING,
 		allowNull: false
 	}
-}, {
-	// options
 });
 
 module.exports = User;
