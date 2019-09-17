@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
+// import CharCard from "./datacard.js";
+import CardBodyInfo from "./CardBodyInfo.js";
 
-class Collapser extends Component {
+// Look into React REDUX as a way to make this whole architecture more efficient and streamlined.
+
+class Collapser extends Component {    
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
-    this.state = { collapse: false };
+    this.state = { 
+        collapse: false,
+        // animal:animal
+    };
   }
 
   toggle() {
@@ -19,11 +26,7 @@ class Collapser extends Component {
         <Collapse isOpen={this.state.collapse}>
           <Card>
             <CardBody>
-                
-            Anim pariatur cliche reprehenderit,
-             enim eiusmod high life accusamus terry richardson ad squid. Nihil
-             anim keffiyeh helvetica, craft beer labore wes anderson cred
-             nesciunt sapiente ea proident.
+                <CardBodyInfo animal={this.props.animal}/>
             </CardBody>
           </Card>
         </Collapse>
