@@ -3,6 +3,7 @@ import "./cardstyle.css";
 // import { Collapse, CardBody, Card } from 'reactstrap';
 import Collapser from "./datacardcollapser.js";
 
+
 // function CharCard(props) {
 class CharCard extends Component {
   constructor(props) {

@@ -22,8 +22,12 @@
   "dependencies": {
     "axios": "^0.19.0",
     "bcrypt": "^3.0.6",
+
+    "curl": "^0.1.4",
+    "dotenv": "^8.1.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "reactstrap": "^8.0.1"
+    "reactstrap": "^8.0.1",
+    "sequelize": "^5.18.4"
   }
 }
