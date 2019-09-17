@@ -4,7 +4,9 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "react": "^16.6.3",
+    "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1"
   },
@@ -16,5 +18,11 @@
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.14.3"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

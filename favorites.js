@@ -12,8 +12,6 @@ const Favorites = sequelize.define('favorites', {
     allowNull: false
     // allowNull defaults to true
   }
-}, {
-  // options
 });
 
 module.exports = Favorites;

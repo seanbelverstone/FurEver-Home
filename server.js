@@ -7,7 +7,7 @@ const User = require("./user");
 const Favorites = require("./favorites");
 app.use(express.json());
 app.use(express.urlencoded());
-//making sure everything is hooked up correctly 
+//making sure everything is hooked up correctly
 sequelize
   .authenticate()
   .then(() => {
@@ -17,27 +17,26 @@ sequelize
     console.error("Unable to connect to the database:", err);
   });
 
-
 //using userid as a placeholder, user requests favorites and server responds w/ their favorites
-app.get('/favorites/:userid', (request, response) => {
+app.get("/favorites/:userid", (request, response) => {
   Favorites.findAll({
     where: {
       user_id: request.params.userid
     }
-  }) .then(favorites => {
+  }).then(favorites => {
     response.json(favorites);
-  })
+  });
 });
 
 //code to allow a user to insert into Favorites table ALSO NEEDS TO BE UPDATED WITH NEW INFO
-app.post('/favorites', (request, response) =>{
+app.post("/favorites", (request, response) => {
   Favorites.create({
     user_id: request.body.user_id,
     pet_id: request.body.pet_id
   }).then(newFavorite => {
     response.json(newFavorite);
-  })
-})
+  });
+});
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -51,5 +50,5 @@ app.get("*", function(req, res) {
 });
 
 app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+  console.log(" ==> API server now on port  " + PORT);
 });
