@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import Jumbotron from "./components/jumbotron";
 import "./App.css";
@@ -47,9 +48,6 @@ class App extends Component {
 
 
     return (
-
-      
-      
       <React.Fragment>
         <Jumbotron />
         <div className="charCard">
