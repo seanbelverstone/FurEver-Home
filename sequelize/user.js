@@ -1,33 +1,24 @@
-let sequelize;
-const Sequelize = require("sequelize");
-const config = require("../client/config");
+module.exports = (sequelize, DataTypes) => {
 
-if (config.use_env_variable) {
-	sequelize = new Sequelize(process.env[config.use_env_variable]);
-} else {
-	sequelize = new Sequelize(
-		config.database,
-		config.username,
-		config.password,
-		config
-	);
-}
+	const user = sequelize.define("user", {
 
-const User = sequelize.define("user", {
+		name: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		email: {
+			type: DataTypes.STRING,
+			allowNull: false
+			// allowNull defaults to true
+		},
+		password: {
+			type: DataTypes.STRING,
+			allowNull: false
+		}
+	});
 
-	name: {
-		type: Sequelize.STRING,
-		allowNull: false
-	},
-	email: {
-		type: Sequelize.STRING,
-		allowNull: false
-		// allowNull defaults to true
-	},
-	password: {
-		type: Sequelize.STRING,
-		allowNull: false
-	}
-});
+	user.sync({force: true});
+  
+	return user;
 
-module.exports = User;
+};
