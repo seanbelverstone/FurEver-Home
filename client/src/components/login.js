@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Button, Form, FormGroup, Input } from "reactstrap";
-const db = {};
 
 export default class Login extends React.Component {
 
