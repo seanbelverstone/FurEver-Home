@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./cardstyle.css";
 // import { Collapse, CardBody, Card } from 'reactstrap';
 import Collapser from "./datacardcollapser.js";
+import petData from "__dirname/../../routes/apiRoutes.js";
 
 // function CharCard(props) {
 class CharCard extends Component {
@@ -20,6 +21,7 @@ class CharCard extends Component {
 
   render() {
     console.log("datacard.js thinks that this.props is", this.props);
+    console.log("imported petData function is", petData());
     return (
 
       <React.Fragment>
