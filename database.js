@@ -1,23 +1,23 @@
 const Sequelize = require("sequelize");
-<<<<<<< HEAD
-const sequelize = new Sequelize("mysql://root:root@localhost:3307/furever-home", {
-    define: {
-        timestamps: false
-    }
-});
+const env = process.env.NODE_ENV || "development";
+const config = require("./client/config/config.json")[env];
+console.log(config);
+
+if (config.use_env_variable) {
+	var sequelize = new Sequelize (process.env[config.use_env_variable]);
+} else {
+	const sequelize = new Sequelize(config.database, config.username, config.password, { //config.email,
+		host: "localhost",
+		dialect: "mysql",
+		pool: {
+			max: 5,
+			min: 0,
+			acquire: 30000,
+			idle: 10000
+		}
+	});
+};
+
+
 
 module.exports = sequelize;
-=======
-const sequelize = new Sequelize("username", "email", "password", {
-	host: "localhost",
-	dialect: "mysql",
-	pool: {
-		max: 5,
-		min: 0,
-		acquire: 30000,
-		idle: 10000
-	}
-});
-
-module.exports = sequelize;
->>>>>>> master

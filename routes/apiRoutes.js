@@ -49,7 +49,6 @@ module.exports = (app) => {
             axios(getOptions).then(response => response.data)
             .then((data) => {
                 res.json(data);
-                console.log(res.json(data));
             });
         }
 
