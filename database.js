@@ -1,4 +1,13 @@
 const Sequelize = require("sequelize");
+<<<<<<< HEAD
+const sequelize = new Sequelize("mysql://root:root@localhost:3307/furever-home", {
+    define: {
+        timestamps: false
+    }
+});
+
+module.exports = sequelize;
+=======
 const sequelize = new Sequelize("username", "email", "password", {
 	host: "localhost",
 	dialect: "mysql",
@@ -11,3 +20,4 @@ const sequelize = new Sequelize("username", "email", "password", {
 });
 
 module.exports = sequelize;
+>>>>>>> master

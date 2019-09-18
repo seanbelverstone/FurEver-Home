@@ -9,7 +9,6 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
-    "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
@@ -30,5 +29,13 @@
     "mysql2": "^1.7.0",
     "reactstrap": "^8.0.1",
     "sequelize": "^5.18.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanbelverstone/FurEver-Home.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seanbelverstone/FurEver-Home/issues"
+  },
+  "homepage": "https://github.com/seanbelverstone/FurEver-Home#readme"
 }
