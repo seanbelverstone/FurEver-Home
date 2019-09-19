@@ -1,5 +1,4 @@
 const axios = require("axios");
-console.log("We are running apiRoutes.js!");
 
 module.exports = (app) => {
     app.get('/api/pets', function(req, res) {
@@ -50,6 +49,7 @@ module.exports = (app) => {
             axios(getOptions).then(response => response.data)
             .then((data) => {
                 res.json(data);
+                console.log(data);
             });
         }
 
