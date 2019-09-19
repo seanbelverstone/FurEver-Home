@@ -1,4 +1,4 @@
-const sequelize = require('./database.js');
+const sequelize = require('./sequelize/database.js');
 const Sequelize = require('sequelize');
 
 const Favorites = sequelize.define('favorites', {
