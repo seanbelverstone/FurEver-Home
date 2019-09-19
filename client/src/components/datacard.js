@@ -53,7 +53,6 @@ class CharCard extends Component {
 
                 </div>
 
-							</div>
                 
 						</ul>        
 					</div>
