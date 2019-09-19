@@ -1,9 +1,6 @@
 import React from "react";
 
 const CardBodyInfo = (props) => {
-    // console.log("CardBodyInfo has been activated!");
-    console.log("CardBodyInfo.js says: Props is: ", props);
-    console.log("CardBodyInfo.js says: Animal prop is", props.animal);
     return (
       <React.Fragment>
         <li>
