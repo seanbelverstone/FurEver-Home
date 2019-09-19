@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import "./cardstyle.css";
 // import { Collapse, CardBody, Card } from 'reactstrap';
 import Collapser from "./datacardcollapser.js";
-import petData from "__dirname/../../routes/apiRoutes.js";
+// import petData from "__dirname/../../routes/apiRoutes.js";
+// import PetData from "
 
 // function CharCard(props) {
 class CharCard extends Component {
@@ -21,7 +22,7 @@ class CharCard extends Component {
 
   render() {
     console.log("datacard.js thinks that this.props is", this.props);
-    console.log("imported petData function is", petData());
+    // console.log("imported petData function is", petData());
     return (
 
       <React.Fragment>
@@ -53,15 +54,6 @@ class CharCard extends Component {
                   <Collapser animal={this.props.animal}/>
 
 
-                  {/* <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Toggle</Button> */}
-                  {/* <Collapse>
-                    <Card>
-                      <CardBody>
-                        <p>Card Body Info is about to activated...</p>
-                        <CardBodyInfo spayed_neutered= "Hello"/>
-                      </CardBody>
-                    </Card>
-                  </Collapse> */}
                 </div>
                 
               </ul>        

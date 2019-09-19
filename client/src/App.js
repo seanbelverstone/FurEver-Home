@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Jumbotron from "./components/jumbotron";
 import "./App.css";
-import animals from "../src/animals.json";
+// import animals from "../src/animals.json";
 import CharCard from "./components/datacard.js";
 import axios from "axios";
 // import CardBodyInfo from "./components/CardBodyInfo.js";
@@ -13,7 +13,7 @@ class App extends Component {
   // Setting this.state.chars to the chars json array
   state = {
     // Initialize and import the chars array
-    animals: animals,
+    animals: [],
     // Create an array storing the ID of Favorites
     favArray: [],
     users:[]
@@ -21,9 +21,7 @@ class App extends Component {
   componentDidMount() {
     axios.get("api/pets").then(response => response.data)
     .then((data) => {
-      this.setState({ users: data })
-      // console.log(this.state.users)
-      // console.log(data)
+      this.setState({ animals: data.animals })
     });
   };
 
