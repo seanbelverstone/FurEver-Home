@@ -29,5 +29,11 @@ class FavBar extends React.Component {
 		);
 	}
 }
+
+
+/* have a function on the favbar to set pic and name 
+put pic and name in the state 
  
 export default FavBar;
+pass function as a props
+this.function.prop ()
