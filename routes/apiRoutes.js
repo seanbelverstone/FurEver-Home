@@ -1,9 +1,10 @@
 const axios = require("axios");
+console.log("We are running apiRoutes.js!");
 
 module.exports = (app) => {
     app.get('/api/pets', function(req, res) {
     // 'api/pets' is the route that I created and a Client will make a request to.
-
+        console.log("We have entered the app.get");
         // Need two variables below to request Access Token
         const apiUser = "4pcDx02VBYwJBPWpTFmC4H9iPE9k39YSjUEVffDY";
         const apiKey = "1m3lD0sxsdS4Q42UeqiymYgP1iUxafZ82l3iX63sasQdLBFST2";
