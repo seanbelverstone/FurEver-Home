@@ -35,12 +35,13 @@ module.exports = (app) => {
 
         // GET option responds with the Data by Access Token.
         function handleGetRequest(accessToken) {
-            const API_URL = "https://api.petfinder.com/v2/animals"
+            const API_URL = "https://api.petfinder.com/v2/animals?limit=100"
 
             const getOptions = {
                 method: "GET",
                 url: API_URL,
                 headers: {
+                    "limit": "100",
                     "Authorization": `Bearer ${accessToken}` 
                     // This is how I have to use the access token by "Bearer" to get the data.
                 }

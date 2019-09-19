@@ -13,6 +13,8 @@ class CharCard extends Component {
         collapse: false
         // animal:props.animal
     };
+    console.log(props.animal);
+    console.log(props.animal.photos);
   }
 
   toggle() {
@@ -28,10 +30,10 @@ class CharCard extends Component {
         <div className="animalCard">
           {/* <div className="container"> */}
         
-            <button id="favButton" src="https://cdn3.iconfinder.com/data/icons/user-interface-48/52/empty-star-512.png" onClick={() => addFavorite(this.props.animal.id)}/>
+            <input alt="favstar" type="image" id="favButton" src="https://cdn.icon-icons.com/icons2/54/PNG/256/favorite_favorite_favorite_star_10835.png" onClick={() => addFavorite(this.props.animal.id)}/>
 
             <div className="img-container">
-              <img alt={this.props.animal.name} src={this.props.animal.photos.medium} />
+              <img alt={this.props.animal.name} src={this.props.animal.photos[0].medium}/> 
             </div>
             {/* <favorite-star></favorite-star> */}
             <div className="content">
@@ -52,16 +54,6 @@ class CharCard extends Component {
                   
                   <Collapser animal={this.props.animal}/>
 
-
-                  {/* <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Toggle</Button> */}
-                  {/* <Collapse>
-                    <Card>
-                      <CardBody>
-                        <p>Card Body Info is about to activated...</p>
-                        <CardBodyInfo spayed_neutered= "Hello"/>
-                      </CardBody>
-                    </Card>
-                  </Collapse> */}
                 </div>
                 
               </ul>        
