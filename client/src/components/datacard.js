@@ -2,8 +2,7 @@ import React, {Component} from "react";
 import "./cardstyle.css";
 // import { Collapse, CardBody, Card } from 'reactstrap';
 import Collapser from "./datacardcollapser.js";
-// import petData from "__dirname/../../routes/apiRoutes.js";
-// import PetData from "
+import {addFavorite} from "./favorites.js";
 
 // function CharCard(props) {
 class CharCard extends Component {
@@ -20,36 +19,35 @@ class CharCard extends Component {
 		this.setState(state => ({ collapse: !state.collapse }));
 	}
 
-	render() {
-		console.log("datacard.js thinks that this.props is", this.props);
-		console.log("imported petData function is", petData());
-		return (
+
+  render() {
+    return (
 
 			<React.Fragment>
 				<div className="animalCard">
 					{/* <div className="container"> */}
         
-					{/* <button src="https://cdn3.iconfinder.com/data/icons/user-interface-48/52/empty-star-512.png" onClick={() => props.addFavorite(props.id)}/> */}
+            <button id="favButton" src="https://cdn3.iconfinder.com/data/icons/user-interface-48/52/empty-star-512.png" onClick={() => addFavorite(this.props.animal.id)}/>
 
-					<div className="img-container">
-						<img alt={this.props.animal.name} src={this.props.animal.image} />
-					</div>
-					{/* <favorite-star></favorite-star> */}
-					<div className="content">
-						<ul>
-							<li>
-								<strong>Name:</strong> {this.props.animal.name}
-							</li>
-							<li>
-								<strong>Type:</strong> {this.props.animal.type}
-							</li>
-							<li>
-								<strong>Gender:</strong> {this.props.animal.gender}
-							</li>
-							<li>
-								<strong>Description:</strong> {this.props.animal.description}
-							</li>
-							<div className="collapseDiv">
+            <div className="img-container">
+              <img alt={this.props.animal.name} src={this.props.animal.photos.medium} />
+            </div>
+            {/* <favorite-star></favorite-star> */}
+            <div className="content">
+              <ul>
+                <li>
+                  <strong>Name:</strong> {this.props.animal.name}
+                </li>
+                <li>
+                  <strong>Type:</strong> {this.props.animal.type}
+                </li>
+                <li>
+                  <strong>Gender:</strong> {this.props.animal.gender}
+                </li>
+                <li>
+                  <strong>Description:</strong> {this.props.animal.description}
+                </li>
+                <div className="collapseDiv">
                   
 								<Collapser animal={this.props.animal}/>
 
