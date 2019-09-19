@@ -6,27 +6,26 @@ import {addFavorite} from "./favorites.js";
 
 // function CharCard(props) {
 class CharCard extends Component {
-  constructor(props) {
-    super(props);
-    this.toggle = this.toggle.bind(this);
-    this.state = { 
-        collapse: false
-        // animal:props.animal
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.toggle = this.toggle.bind(this);
+		this.state = { 
+			collapse: false
+			// animal:props.animal
+		};
+	}
 
-  toggle() {
-    this.setState(state => ({ collapse: !state.collapse }));
-  }
-
+	toggle() {
+		this.setState(state => ({ collapse: !state.collapse }));
+	}
 
 
   render() {
     return (
 
-      <React.Fragment>
-        <div className="animalCard">
-          {/* <div className="container"> */}
+			<React.Fragment>
+				<div className="animalCard">
+					{/* <div className="container"> */}
         
             <button id="favButton" src="https://cdn3.iconfinder.com/data/icons/user-interface-48/52/empty-star-512.png" onClick={() => addFavorite(this.props.animal.id)}/>
 
@@ -50,26 +49,18 @@ class CharCard extends Component {
                 </li>
                 <div className="collapseDiv">
                   
-                  <Collapser animal={this.props.animal}/>
+								<Collapser animal={this.props.animal}/>
 
-
-                  {/* <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Toggle</Button> */}
-                  {/* <Collapse>
-                    <Card>
-                      <CardBody>
-                        <p>Card Body Info is about to activated...</p>
-                        <CardBodyInfo spayed_neutered= "Hello"/>
-                      </CardBody>
-                    </Card>
-                  </Collapse> */}
                 </div>
+
+							</div>
                 
-              </ul>        
-            </div>
-          {/* </div> */}
-        </div>
-      </React.Fragment>
-    );
-};
+						</ul>        
+					</div>
+					{/* </div> */}
+				</div>
+			</React.Fragment>
+		);
+	}
 };
 export default CharCard;
