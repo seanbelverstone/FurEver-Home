@@ -8,7 +8,7 @@ const Favorites = require("./favorites");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
 //making sure everything is hooked up correctly
 sequelize
 	.authenticate()
@@ -57,10 +57,15 @@ app.post("/api/users", (request, response) => {
 
 });
 
+// Here, we are both calling apiRoutes as a function, and then Immediately Invoking it. MAGIC!!
+require("./routes/apiRoutes.js")(app);
+// console.log(app);
+
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
-	res.sendFile(path.join(__dirname, "./client/build/index.html"));
+	res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 app.listen(PORT, function() {

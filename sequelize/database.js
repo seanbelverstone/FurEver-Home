@@ -1,7 +1,6 @@
 const Sequelize = require("sequelize");
 const env = process.env.NODE_ENV || "development";
 const config = require("../client/config/config.json")[env];
-console.log(config);
 var sequelize;
 
 
