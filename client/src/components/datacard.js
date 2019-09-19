@@ -54,20 +54,7 @@ class CharCard extends Component {
 								<Collapser animal={this.props.animal}/>
 
 
-<<<<<<< HEAD
                 </div>
-=======
-								{/* <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Toggle</Button> */}
-								{/* <Collapse>
-                    <Card>
-                      <CardBody>
-                        <p>Card Body Info is about to activated...</p>
-                        <CardBodyInfo spayed_neutered= "Hello"/>
-                      </CardBody>
-                    </Card>
-                  </Collapse> */}
-							</div>
->>>>>>> 511f237b91b5c391327f811ebde5f47b52f09d49
                 
 						</ul>        
 					</div>
