@@ -57,31 +57,37 @@ export default class Login extends React.Component {
 		// AXIOS call to the api using sequelize
 		//if user is in database, don't do anything right now
 		//if user is not in the database, create new user 
-    
-		//Does this need to be here?
-		if (username) {
-			fetch("/api/users", {
-				method: "POST",
-				body: {
-					name: username,
-					email: email,
-					password: password 
-				},
-				headers: {
-					"Content-Type": "application/json"
-				}
-			})
-				.then(function(response) {      
-					return response.text();
-				}, function(error) {
-					throw (error); //=> String
-				});
-          
-		} else {
-			console.log("You already have an account");
-		}
+		const data = {
+            name: username,
+            email: email,
+            password: password 
+        };
 
-	}
+        //Does this need to be here?
+        if (username) {
+            fetch("/api/users", {
+                method: "POST",
+                mode: "cors", 
+                cache: "no-cache",
+                credentials: "same-origin",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                redirect: "follow", // manual, *follow, error
+                referrer: "no-referrer",
+                body: JSON.stringify(data)
+            })
+                .then(function(response) {      
+                    return response.text();
+                }, function(error) {
+                    throw (error); //=> String
+                });
+          
+        } else {
+            console.log("You already have an account");
+        }
+
+    }
 
 	render() {
 		return (

@@ -4,6 +4,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const sequelize = require("./sequelize/database");
 const User = require("./sequelize/user");
+
+const db = require("./sequelize/database");
+
 const Favorites = require("./favorites");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -47,7 +50,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.post("/api/users", (request, response) => {
-	User.create({
+	db.User.create({
 		name: request.body.name,
 		email: request.body.email,
 		password: request.body.password
