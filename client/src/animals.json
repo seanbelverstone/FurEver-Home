@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "name": "Garfield",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg",
+      "type": "Cat",
+      "gender": "Male",
+      "description": "Loves lasagna, hates Mondays",
+      "spayed_neutered": "Yes",
+      "shots_current": "Yes",
+      "children": "No",
+      "email": "jarbuckle@boringville.org",
+      "phone": "(555)123-4567"
+    },
+    {
+      "id": 2,
+      "name": "Odie",
+      "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13000937/Beagle-On-White-07.jpg",
+      "type": "Dog",
+      "gender": "Male",
+      "description": "Loves Jon, hates cats",
+      "spayed_neutered": "No",
+      "shots_current": "I HATE SHOTS",
+      "children": "KIDS RULE",
+      "email": "jarbuckle@boringville.org",
+      "phone": "(555)123-4567"
+    }
+]

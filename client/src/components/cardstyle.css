@@ -1,0 +1,87 @@
+#animalCardarea {
+  width:45%;
+  justify-content:center;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+/* animalCard CSS */
+.animalCard {
+  background: yellow;
+  border-radius: 2px;
+  width: 700px;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  padding:0;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+}
+
+/* .collapseDiv {
+    width:200px;
+} */
+
+.card-body {
+    width:250px;
+}
+
+.animalCard > .img-container {
+  height: 100%;
+  width: 175px;
+  overflow: hidden;
+  text-align: center;
+  /* background: darkslategray; */
+  /* background-image: url(https://images-na.ssl-images-amazon.com/images/I/71ov4Ief4LL._SX466_.jpg); */
+  background-repeat: round;
+  float:left;
+}
+.animalCard > .img-container > img {
+  width: 100%;
+  height:auto;
+}
+
+.animalCard > .content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 15px;
+  float:left;
+
+}
+
+.animalCard > .content > ul {
+  list-style-type: none;
+}
+
+.animalCard > .content > ul > li {
+  margin-top: 18px;
+}
+
+.animalCard > .remove {
+  color: #ff1744;
+  font-size: 48px;
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.animalCard > .remove:hover {
+  color: #d50000;
+}
+
+.card {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    right: -37%;
+    top: 0px;
+}
