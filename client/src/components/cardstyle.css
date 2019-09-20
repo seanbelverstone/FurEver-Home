@@ -1,3 +1,7 @@
+button,input {
+    width: 32px;
+    height: auto;
+}
 #animalCardarea {
   width:45%;
   justify-content:center;
@@ -7,7 +11,8 @@
 
 /* animalCard CSS */
 .animalCard {
-  background: yellow;
+  /* background: yellow; */
+    /* background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Download-High-Res-Photoshop-Sublte-Vector-Patterns.jpg"); */
   border-radius: 2px;
   width: 700px;
   height: 300px;
@@ -32,7 +37,7 @@
   overflow: hidden;
   text-align: center;
   /* background: darkslategray; */
-  /* background-image: url(https://images-na.ssl-images-amazon.com/images/I/71ov4Ief4LL._SX466_.jpg); */
+
   background-repeat: round;
   float:left;
 }
@@ -46,7 +51,7 @@
   padding-right: 1rem;
   font-size: 15px;
   float:left;
-
+    display: contents;
 }
 
 .animalCard > .content > ul {

@@ -6,14 +6,16 @@ import {addFavorite} from "./favorites.js";
 
 // function CharCard(props) {
 class CharCard extends Component {
-	constructor(props) {
-		super(props);
-		this.toggle = this.toggle.bind(this);
-		this.state = { 
-			collapse: false
-			// animal:props.animal
-		};
-	}
+  constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = { 
+        collapse: false
+        // animal:props.animal
+    };
+    console.log(props.animal);
+    console.log(props.animal.photos);
+  }
 
 	toggle() {
 		this.setState(state => ({ collapse: !state.collapse }));
@@ -27,10 +29,10 @@ class CharCard extends Component {
 				<div className="animalCard">
 					{/* <div className="container"> */}
         
-            <button id="favButton" src="https://cdn3.iconfinder.com/data/icons/user-interface-48/52/empty-star-512.png" onClick={() => addFavorite(this.props.animal.id)}/>
+            <input alt="favstar" type="image" id="favButton" src="https://cdn.icon-icons.com/icons2/54/PNG/256/favorite_favorite_favorite_star_10835.png" onClick={() => addFavorite(this.props.animal.id)}/>
 
             <div className="img-container">
-              <img alt={this.props.animal.name} src={this.props.animal.photos.medium} />
+              <img alt={this.props.animal.name} src={this.props.animal.photos[0].medium}/> 
             </div>
             {/* <favorite-star></favorite-star> */}
             <div className="content">

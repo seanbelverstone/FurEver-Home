@@ -7,13 +7,13 @@ const CardBodyInfo = (props) => {
           <strong>Notes:</strong>
           <ul>
           <li>
-            <strong>Spayed/Neutrered:</strong> {props.animal.spayed_neutered}
+            <strong>Spayed/Neutrered:</strong> {props.animal.attributes.spayed_neutered}
           </li>
           <li>
-            <strong>Up to Date on Shots:</strong> {props.animal.shots_current}
+            <strong>Up to Date on Shots:</strong> {props.animal.attributes.shots_current}
           </li>
           <li>
-            <strong>Child-Friendly:</strong> {props.animal.children}
+            <strong>House-Trained:</strong> {props.animal.attributes.house_trained}
           </li>
           
           </ul>
@@ -24,10 +24,10 @@ const CardBodyInfo = (props) => {
         </li>
         <ul>
           <li>
-            <strong>Email:</strong> {props.animal.email}
+            <strong>Email:</strong> {props.animal.contact.email}
           </li>
           <li>
-            <strong>Phone Number:</strong> {props.animal.phone}
+            <strong>Phone Number:</strong> {props.animal.contact.phone}
           </li>
         </ul>
       </React.Fragment>
