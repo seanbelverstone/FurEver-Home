@@ -46,13 +46,13 @@ module.exports = (app) => {
                     // This is how I have to use the access token by "Bearer" to get the data.
                 }
             }
-    
-            axios(getOptions).then(response => response.data)
-            .then((data) => {
-                res.json(data);
-                console.log(data);
-            });
-        }
 
-    });
-}
+    
+			axios(getOptions).then(response => response.data)
+				.then((data) => {
+					res.json(data);
+				});
+		}
+
+	});
+};
