@@ -6,7 +6,6 @@ import {addFavorite} from "./favorites.js";
 
 // function CharCard(props) {
 class CharCard extends Component {
-<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -17,20 +16,6 @@ class CharCard extends Component {
     console.log(props.animal);
     console.log(props.animal.photos);
   }
-
-  toggle() {
-    this.setState(state => ({ collapse: !state.collapse }));
-  }
-=======
-	constructor(props) {
-		super(props);
-		this.toggle = this.toggle.bind(this);
-		this.state = { 
-			collapse: false
-			// animal:props.animal
-		};
-	}
->>>>>>> c950186a2264537b9f4780d32f8dc3f2500c03d9
 
 	toggle() {
 		this.setState(state => ({ collapse: !state.collapse }));
@@ -66,11 +51,7 @@ class CharCard extends Component {
                 </li>
                 <div className="collapseDiv">
                   
-<<<<<<< HEAD
-                  <Collapser animal={this.props.animal}/>
-=======
 								<Collapser animal={this.props.animal}/>
->>>>>>> c950186a2264537b9f4780d32f8dc3f2500c03d9
 
                 </div>
 
