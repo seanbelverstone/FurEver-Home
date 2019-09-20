@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Input } from "reactstrap";
 
 export default class Login extends React.Component {
 
-	constructor (props) {
+	constructor(props) {
 		super(props);
 		// Defines the form's values as a state that will change
 		this.state = {
@@ -20,7 +20,7 @@ export default class Login extends React.Component {
 				}
 			}
 		};
-  
+
 		// Binding this for the two functions so React knows what 'this' is
 		this.changeHandler = this.changeHandler.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
@@ -28,10 +28,10 @@ export default class Login extends React.Component {
 
 	// Setting state for the values
 	changeHandler(event) {
-      
+
 		const name = event.target.name;
 		const value = event.target.value;
-    
+
 		this.setState({
 			formControls: {
 				...this.state.formControls,
@@ -40,7 +40,7 @@ export default class Login extends React.Component {
 					value
 				}
 			}
-        
+
 		});
 	}
 
@@ -51,32 +51,39 @@ export default class Login extends React.Component {
 		const password = this.state.formControls.password.value;
 		console.log("Name: " + username);
 		console.log("Email:" + email);
-		console.log("Password: "+ password);
+		console.log("Password: " + password);
 		this.props.closeModal();
-    
+
 		// AXIOS call to the api using sequelize
 		//if user is in database, don't do anything right now
 		//if user is not in the database, create new user 
-    
+
+		const data = {
+			name: username,
+			email: email,
+			password: password
+		};
+
 		//Does this need to be here?
 		if (username) {
 			fetch("/api/users", {
 				method: "POST",
-				body: {
-					name: username,
-					email: email,
-					password: password 
-				},
+				mode: "cors",
+				cache: "no-cache",
+				credentials: "same-origin",
 				headers: {
 					"Content-Type": "application/json"
-				}
+				},
+				redirect: "follow",
+				referrer: "no-referrer",
+				body: JSON.stringify(data)
 			})
-				.then(function(response) {      
+				.then(function(response) {
 					return response.text();
 				}, function(error) {
 					throw (error); //=> String
 				});
-          
+
 		} else {
 			console.log("You already have an account");
 		}
@@ -123,4 +130,3 @@ export default class Login extends React.Component {
 		);
 	}
 }
-
