@@ -1,4 +1,4 @@
-button,input {
+#favButton {
     width: 32px;
     height: auto;
 }
@@ -8,38 +8,49 @@ button,input {
   padding-top:50px;
   padding-bottom:50px;
 }
+.charCard {
+    /* background-color:green; */
+    left: 15%;
+    position: absolute;
+}
 
 /* animalCard CSS */
 .animalCard {
   /* background: yellow; */
-    /* background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Download-High-Res-Photoshop-Sublte-Vector-Patterns.jpg"); */
-  border-radius: 2px;
-  width: 700px;
-  height: 300px;
-  margin: 1rem;
-  position: relative;
-  padding:0;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
+    background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Download-High-Res-Photoshop-Sublte-Vector-Patterns.jpg");
+    background-size:cover;
+    display: inline-block;
+    border-radius: 2px;
+    width: 700px;
+    height: 300px;
+    margin: 1rem;
+    position: relative;
+    padding:0;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    text-align: left;
 }
 
-/* .collapseDiv {
-    width:200px;
-} */
-
 .card-body {
-    width:250px;
+    position: relative;
+    padding: 1rem;
+    height: auto;
+    width: fit-content;
+}
+.animalCard > .content > ul {
+    list-style-type: none;
+    /* border: 5px solid red; */
 }
 
 .animalCard > .img-container {
-  height: 100%;
-  width: 175px;
-  overflow: hidden;
-  text-align: center;
-  /* background: darkslategray; */
-
-  background-repeat: round;
-  float:left;
+height: 300px;
+    width: auto;
+    overflow: hidden;
+    text-align: center;
+    /* background: darkslategray; */
+    background-repeat: round;
+    float: left;
+    clear: left;
+    margin-right:25px;
 }
 .animalCard > .img-container > img {
   width: 100%;
@@ -47,11 +58,17 @@ button,input {
 }
 
 .animalCard > .content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 15px;
-  float:left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 15px;
+    float:left;
     display: contents;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .animalCard > .content > ul {
@@ -61,6 +78,9 @@ button,input {
 .animalCard > .content > ul > li {
   margin-top: 18px;
 }
+
+
+
 
 .animalCard > .remove {
   color: #ff1744;
@@ -87,6 +107,6 @@ button,input {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    right: -37%;
+    right: -50%;
     top: 0px;
 }
