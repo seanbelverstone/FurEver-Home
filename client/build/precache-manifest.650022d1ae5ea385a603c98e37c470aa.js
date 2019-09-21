@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "63d4d3c53ebaceb5e264",
+    "revision": "01ca46b3ff59f2f5d72d",
     "url": "/static/css/main.bcd3d6ed.chunk.css"
   },
   {
-    "revision": "63d4d3c53ebaceb5e264",
-    "url": "/static/js/main.b8977b74.chunk.js"
+    "revision": "01ca46b3ff59f2f5d72d",
+    "url": "/static/js/main.a0a60af6.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "bfbddb996f89ee792c38",
-    "url": "/static/js/2.a0890377.chunk.js"
+    "revision": "e52b4083d3260afae26b",
+    "url": "/static/css/2.166c22b2.chunk.css"
+  },
+  {
+    "revision": "e52b4083d3260afae26b",
+    "url": "/static/js/2.bedd2413.chunk.js"
   },
   {
     "revision": "a56615a7431c0313fd1c2960fd12ad30",
@@ -24,7 +28,7 @@ self.__precacheManifest = [
     "url": "/static/media/jumbotronBackground.036b9e0a.png"
   },
   {
-    "revision": "580ce40ff2df01cf3216e56138a19723",
+    "revision": "4c61525a344a6420e1557d9d3438340e",
     "url": "/index.html"
   }
 ];
