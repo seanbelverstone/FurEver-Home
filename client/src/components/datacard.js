@@ -30,6 +30,9 @@ class CharCard extends Component {
       this.props.animal.name,
       this.props.animal.photos[0].small
     );
+
+    //store to local storage
+    window.localStorage.setItem("favorites", JSON.stringify(favoriteAnimals));
     console.log(favoriteAnimals);
   }
 

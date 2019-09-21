@@ -1,15 +1,30 @@
-// import React, { Component } from "react";
-// import "./cardtyle.css";
+import React, { Component } from "react";
+import "./cardstyle.css";
 // import { addFavorite } from "./datacard.js";
 
-// class FavoriteAnimals extends Component {
-  
+/* PSUEDOCODE
+Once the datacard data has been stored to local storage or cookies from datacard.js, access this data on
+this file and append the name and image to the favorites bar. */
+
+class FavoriteAnimals extends Component {
+  render() {
+    return (
+      <p> Hello i'm rendering! </p>
+      //access local storage
+      //.append <img> and <p> containing the src and name
+      // <div className="favoriteAnimal"></div>
+    );
+  }
+}
+
+export default FavoriteAnimals;
+
 // // how can I put the onclick Favstar?
 // <Button onClick={() => addFavorite(this.props.animal.id)} />;
 
 //   displayImg = event =>{
 //     event.render()
-//     this.setState({ 
+//     this.setState({
 //       state = {
 //       username: "",
 //       photos: "",
@@ -25,7 +40,6 @@
 //     this.cookies.set("token", response.data.token);
 //     });
 //     };
-
 
 //   //doing cookies here, but how do we connect with sql datbaase instead
 //   cookies = new Cookies();
@@ -67,4 +81,3 @@
 // // };
 
 // //-------------------------------------------
-
