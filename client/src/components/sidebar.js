@@ -27,12 +27,12 @@ class FilterBar extends React.Component {
   }
 
   submitFilters(event) {
-    console.log("The submit has been clicked and the function has been called");
+    // console.log("The submit has been clicked and the function has been called");
     this.setValue(event);
   }
   
     setValue(event, filterLabel) {
-    console.log("SetValue function has started.");
+    // console.log("SetValue function has started.");
     // When the user selects Submit...
     // Scan over all of the drop-down menus to see if the value is anything OTHER THAN "all"
     
@@ -49,27 +49,12 @@ class FilterBar extends React.Component {
     )
     this.props.updateValueControl(valueControl);
 
-    console.log("valueControl is: ", valueControl);
-    console.log("The selected Age is: ", valueControl.age);
-    console.log("The selected Species is: ", valueControl.species);
-    console.log("The selected Coat Length is: ", valueControl.coat);
-    console.log("The selected Gender is: ", valueControl.gender);
-    console.log("The selected size is: ", valueControl.size);
-
-
-    // Here we begin what would be the filterPets function.
-
-
-
-
-
-
-    // ------------------------------------------------------------------------
-
-
-
-
-    // ------------------------------------------------------------------------
+    // console.log("valueControl is: ", valueControl);
+    // console.log("The selected Age is: ", valueControl.age);
+    // console.log("The selected Species is: ", valueControl.species);
+    // console.log("The selected Coat Length is: ", valueControl.coat);
+    // console.log("The selected Gender is: ", valueControl.gender);
+    // console.log("The selected size is: ", valueControl.size);
 
 
 

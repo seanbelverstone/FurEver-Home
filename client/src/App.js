@@ -29,17 +29,10 @@ class App extends Component {
     axios.get("api/pets").then(response => response.data)
     .then((data) => {
       this.setState({ animals: data.animals })
-      console.log(this.state.animals);
+      // console.log(this.state.animals);
       // console.log(this.state.animals.attributes);
     });
   };
-  componentDidUpdate() {
-    console.log("App.js says, the updated valueControl is:", this.state.valueControl);
-
-    
-
-
-  }
 
   renderAnimals() {
     const {age, gender, size, coat, species} = this.state.valueControl;
@@ -47,11 +40,11 @@ class App extends Component {
     .filter(animal => animal.photos.length)
     
       // If parameter is all? Return true. Otherwise, compare!
-    .filter(animal => species==="all" ? true : animal.species.toLowerCase() === species.toLowerCase())
-    .filter(animal => age==="all" ? true : animal.age.toLowerCase() === age.toLowerCase())
+    .filter(animal => species==="all" ? true : animal.species &&animal.species.toLowerCase() === species.toLowerCase())
+    .filter(animal => age==="all" ? true : animal.age &&animal.age.toLowerCase() === age.toLowerCase())
     .filter(animal => coat==="all" ? true : animal.coat && animal.coat.toLowerCase() === coat.toLowerCase())
-    .filter(animal => gender==="all" ? true : animal.gender.toLowerCase() === gender.toLowerCase())
-    .filter(animal => size==="all" ? true : animal.size.toLowerCase() === size.toLowerCase())
+    .filter(animal => gender==="all" ? true : animal.gender &&animal.gender.toLowerCase() === gender.toLowerCase())
+    .filter(animal => size==="all" ? true : animal.size &&animal.size.toLowerCase() === size.toLowerCase())
     
       .map(animal => (
       <div>
