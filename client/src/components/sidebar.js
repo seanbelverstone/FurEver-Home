@@ -3,17 +3,17 @@ import Sidebar from "react-sidebar";
 import "./sidebar.css";
 
 class FilterBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sidebarOpen: true
-    };
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			sidebarOpen: true
+		};
+		this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+	}
  
-  onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
-  }
+	onSetSidebarOpen(open) {
+		this.setState({ sidebarOpen: open });
+	}
  
 renderContent = () => {
   return (
