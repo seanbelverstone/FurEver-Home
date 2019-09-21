@@ -15,8 +15,8 @@ class CharCard extends Component {
         // animal:props.animal
     };
     console.log(props.animal);
-    console.log("HELLO");
-    console.log(props.animal.attributes);
+    // console.log("HELLO");
+    // console.log(props.animal.attributes);
   }
 
 	toggle() {
