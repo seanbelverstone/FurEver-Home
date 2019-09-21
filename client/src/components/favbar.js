@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "react-sidebar";
+import FavoriteAnimals from "./favorites";
  
 class FavBar extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class FavBar extends React.Component {
     render() {
         return (
             <Sidebar
-                sidebar={<b>Sidebar content</b>}
+                sidebar={<b><FavoriteAnimals /></b>}
                 open={this.state.sidebarOpen}
                 onSetOpen={this.onSetSidebarOpen}
         styles={{ 
