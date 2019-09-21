@@ -10,21 +10,11 @@ class FilterBar extends React.Component {
       sidebarOpen: true,
 
       valueControl: {
-        species: {
-          value: ""
-        },
-        age: {
-          value: ""
-        },
-        coatLength: {
-          value: ""
-        },
-        gender: {
-          value: ""
-        },
-        size: {
-          value: ""
-        }
+        species: "all",
+        age: "all",
+        coat: "all",
+        gender: "all",
+        size: "all"
       }
     };
 
@@ -48,11 +38,6 @@ class FilterBar extends React.Component {
     
     // If the value is something other than "all" (e.g., if the user selected a search parameter) we take that 
     // value and we do setState to store it into the searchQueries array.
-    // var testElements = document.getElementByClassName
-    // if ((getElementsByClassName(selectOptions)).val() !== "all") {
-      
-    //   searchQueries = this.state.searchQueries.concat(this.option.value);
-    //   console.log("SEARCHQUERIES IS NOW: ", searchQueries);
 
     let valueControl = this.state.valueControl;
 
@@ -62,11 +47,12 @@ class FilterBar extends React.Component {
       valueControl
       }
     )
+    this.props.updateValueControl(valueControl);
 
     console.log("valueControl is: ", valueControl);
     console.log("The selected Age is: ", valueControl.age);
     console.log("The selected Species is: ", valueControl.species);
-    console.log("The selected Coat Length is: ", valueControl.coatLength);
+    console.log("The selected Coat Length is: ", valueControl.coat);
     console.log("The selected Gender is: ", valueControl.gender);
     console.log("The selected size is: ", valueControl.size);
 
@@ -108,8 +94,8 @@ renderContent = () => {
         <div className="selectMenus">Species</div>
         <select className="selectOptions" onChange={event => this.setValue(event,"species")}>
           <option value="all">All</option>
-          <option value="dogs">Dogs</option>
-          <option value="cats">Cats</option>
+          <option value="dog">Dogs</option>
+          <option value="cat">Cats</option>
         </select>
 
         <div className="selectMenus">Age</div>
@@ -122,14 +108,14 @@ renderContent = () => {
         </select>
 
         <div className="selectMenus">Coat Length</div>
-        <select className="selectOptions" onChange={event => this.setValue(event,"coatLength")}>
+        <select className="selectOptions" onChange={event => this.setValue(event,"coat")}>
           <option value="all">All</option>
-          <option value="hairless">Hairless</option>
+          {/* <option value="hairless">Hairless</option> */}
           <option value="short">Short</option>
           <option value="medium">Medium</option>
           <option value="long">Long</option>
           <option value="wire">Wire</option>
-          <option value="curly">Curly</option>
+          {/* <option value="curly">Curly</option> */}
         </select>
 
         <div className="selectMenus">Gender</div>
@@ -145,7 +131,7 @@ renderContent = () => {
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
-          <option value="extralarge">XL</option>
+          {/* <option value="extralarge">XL</option> */}
         </select>
       </div>
 

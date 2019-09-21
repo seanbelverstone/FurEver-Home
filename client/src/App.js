@@ -16,7 +16,14 @@ class App extends Component {
     animals: [],
     // Create an array storing the ID of Favorites
     favArray: [],
-    users:[]
+    users:[],
+    valueControl: {
+      species: "all",
+      age: "all",
+      coat: "all",
+      gender: "all",
+      size: "all"
+    }
   }
   componentDidMount() {
     axios.get("api/pets").then(response => response.data)
@@ -26,6 +33,32 @@ class App extends Component {
       // console.log(this.state.animals.attributes);
     });
   };
+  componentDidUpdate() {
+    console.log("App.js says, the updated valueControl is:", this.state.valueControl);
+
+    
+
+
+  }
+
+  renderAnimals() {
+    const {age, gender, size, coat, species} = this.state.valueControl;
+    return this.state.animals
+    .filter(animal => animal.photos.length)
+    
+      // If parameter is all? Return true. Otherwise, compare!
+    .filter(animal => species==="all" ? true : animal.species.toLowerCase() === species.toLowerCase())
+    .filter(animal => age==="all" ? true : animal.age.toLowerCase() === age.toLowerCase())
+    .filter(animal => coat==="all" ? true : animal.coat && animal.coat.toLowerCase() === coat.toLowerCase())
+    .filter(animal => gender==="all" ? true : animal.gender.toLowerCase() === gender.toLowerCase())
+    .filter(animal => size==="all" ? true : animal.size.toLowerCase() === size.toLowerCase())
+    
+      .map(animal => (
+      <div>
+      <CharCard animal={animal} />
+      </div>
+      ))
+  }
 
 
   render() {
@@ -34,15 +67,16 @@ class App extends Component {
     return (
       <React.Fragment>
         <Jumbotron />
-        <FilterBar/>
+        <FilterBar updateValueControl={valueControl => (this.setState({valueControl}))} />
         <FavBar/>
         <div className="charCard">
           {/* Before we even render our animals, we are checking whether the Photos key exists for that animal, AND whether that photos array is populated. If both are true, then display the animal card as normal. */}
-          {this.state.animals.filter(animal => animal.photos.length).map(animal => (
+          {this.renderAnimals()}
+          {/* {this.state.animals.filter(animal => animal.photos.length).map(animal => (
             <div>
             <CharCard animal={animal} />
             </div>
-          ))}
+          ))} */}
         </div>
       </React.Fragment>
     
