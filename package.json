@@ -31,6 +31,7 @@
     "modal": "^1.2.0",
     "mysql2": "^1.7.0",
     "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-sidebar": "^3.0.2",
     "reactstrap": "^8.0.1",
     "sequelize": "^5.18.4"

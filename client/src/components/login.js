@@ -79,7 +79,7 @@ export default class Login extends React.Component {
 				throw (error); //=> String
 			});
 
-	}
+    }
 
 	render() {
 		return ( 

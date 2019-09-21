@@ -1,0 +1,80 @@
+#filterTriggerBtn {
+    z-index: 1;
+    background: blue;
+    margin-top: 50px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+element.style {
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    transition: -webkit-transform 0.3s ease-out 0s;
+    will-change: transform;
+    overflow-y: auto;
+    left: 0px;
+    transform: translateX(0%);
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 4px;
+}
+
+
+.sideBarDiv {
+    position: fixed;
+    margin-top: 50px;
+    width: 160px;
+    margin: "350px 0 0 0";
+    background-color: orange;
+    color: "white";
+    padding: "15px";
+    overflow: "hidden";
+    height: "700px";
+    width: "300px";
+    z-Index: "2";
+    position: "relative";
+    top: "0";
+}
+
+/* sidebar {
+    margin: "350px 0 0 0";
+    background-color: orange;
+    color: "white";
+    padding: "15px";
+    overflow: "hidden";
+    height: "700px";
+    width: "300px";
+    z-Index: "2";
+    position: "relative";
+    top: "0";
+}  */
+
+
+#selectMenus {
+    font-size: 20px;
+    padding-left: 15px;
+    color: rgb(54, 53, 54);
+}
+
+#selectOptions {
+    color: rgb(121, 119, 119);
+    background: rgb(214, 136, 136);
+    margin: 15px;
+    width: 130px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+}
+
+#submitBtn {
+    background: rgb(58, 58, 161);
+    border-radius: 5px;
+    color: white;
+    width: 130px;
+    height: 30px;
+    margin: 15px;
+    border: none;
+}

@@ -6,6 +6,7 @@ import {addFavorite} from "./favorites.js";
 
 // function CharCard(props) {
 class CharCard extends Component {
+  
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -14,7 +15,8 @@ class CharCard extends Component {
         // animal:props.animal
     };
     console.log(props.animal);
-    console.log(props.animal.photos);
+    console.log("HELLO");
+    console.log(props.animal.attributes);
   }
 
 	toggle() {
