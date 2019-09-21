@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "react-sidebar";
 import "./sidebar.css";
+// const axios = require("axios");
 
 class FilterBar extends React.Component {
 	constructor(props) {
@@ -56,13 +57,13 @@ class FilterBar extends React.Component {
   
     
     this.setState({
-      // valueControl: {
+      valueControl: {
         species: event.target.value,
         age: event.target.value,
         coatLength: event.target.value,
         gender: event.target.value,
         size: event.target.value
-      // }
+      }
     })
 
     console.log(this.state.valueControl);
@@ -77,8 +78,37 @@ class FilterBar extends React.Component {
 
     console.log("The selected size is: ", this.state.size);
 
-    
+
+    // Here we begin what would be the filterPets function.
+
+
+
+
+
+
+    // ------------------------------------------------------------------------
+
+
+
+  // componentDidMount() {
+  //   axios.get("api/pets").then(response => response.data)
+  //   .then((data) => {
+  //     this.setState({ animals: data.animals })
+  //     console.log(this.state.animals);
+  //     // console.log(this.state.animals.attributes);
+  //   });
+  // };
+
+
+
+
+    // ------------------------------------------------------------------------
+
+
+
   }
+
+
 
 
 
@@ -91,7 +121,9 @@ renderContent = () => {
   return (
     <div>
       <div className="sideBarDiv">
+
         <div id="filterTitle">Adopt a Pet</div>
+        
         <div className="selectMenus">Species</div>
         <select className="selectOptions" onChange={this.setValue}>
           <option value="all">All</option>
@@ -99,8 +131,7 @@ renderContent = () => {
           <option value="cats">Cats</option>
         </select>
 
-        <div className="selectMenus"
-              onChange={this.setValue}>Age</div>
+        <div className="selectMenus">Age</div>
         <select className="selectOptions" onChange={this.setValue}>
           <option value="all">All</option>
           <option 
