@@ -23,7 +23,7 @@ class App extends Component {
     .then((data) => {
       this.setState({ animals: data.animals })
       console.log(this.state.animals);
-      console.log(this.state.animals.attributes);
+      // console.log(this.state.animals.attributes);
     });
   };
 
