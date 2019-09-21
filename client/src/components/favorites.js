@@ -1,29 +1,70 @@
-export const addFavorite = (petId) => {
-  console.log("HELLO WORLD");
-  console.log("The Pet ID we just clicked on is: ", petId);
+// import React, { Component } from "react";
+// import "./cardtyle.css";
+// import { addFavorite } from "./datacard.js";
 
-};
+// class FavoriteAnimals extends Component {
+  
+// // how can I put the onclick Favstar?
+// <Button onClick={() => addFavorite(this.props.animal.id)} />;
 
-// function addFavorite(props) {
-//   return <div className="filterfav-button">{props.filterOptions}</div>;
-// };
+//   displayImg = event =>{
+//     event.render()
+//     this.setState({ 
+//       state = {
+//       username: "",
+//       photos: "",
+//       name: ""
+//     }
+//     });
+//     axios
+//     .post("/api/auth", {
+//     username: this.state.username,
+//     password: this.state.password
+//     })
+//     .then(response => {
+//     this.cookies.set("token", response.data.token);
+//     });
+//     };
 
-//-------------------------------------------
 
-// class LoginForm extends Component {
-//   state = {
-//       image: '',
-//       pet_name: ''
-//   }
+//   //doing cookies here, but how do we connect with sql datbaase instead
+//   cookies = new Cookies();
 
-//   constructor(props) {
-//       super(props);
-//   }
+//   constuctor(props) {
+//     super(props);
 
 //   render() {
 //     return (
+//       <React.Fragment>
+//         <div className="favBar">
+//           <div className="img-container">
+//             <img
+//               alt={this.props.animal.name}
+//               src={this.props.animal.photos[0].small}
+//             />
+//           </div>
 
-/*
-on "fav-button" click, Pet Id is stored in favorites database
+//           <div className="content">
+//             <strong>Name:</strong> {this.props.animal.name}
+//           </div>
+//         </div>
+//       </React.Fragment>
+//     );
+//   }
+// }
 
-favorited pet is rendered onto favorites section, showing name and image of pet using pet_id*/
+// export default FavoriteAnimals;
+
+// /* SHOULD WE USE THE NEXT 3 LINES?
+// export const addFavorite = petId => {
+//   console.log("HELLO WORLD");
+//   console.log("The Pet ID we just clicked on is: ", petId);
+// };
+// */
+
+// // function addFavorite(props) {
+// //   return <div className="filterfav-button">{props.filterOptions}</div>;
+// // };
+
+// //-------------------------------------------
+
