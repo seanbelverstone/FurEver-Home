@@ -1,3 +1,50 @@
+# FurEver Home
+*## Project Two*
+
+### Description
+Our application allows a user to search for animals in shelters around the US. Created using React js, a list of animal cards is displayed and plethora of information about each animal is available for easy reading. Some examples of the information provided is the name, gender and a short description. Upon clicking a `toggle` button, contact and further information is revealed.
+
+The user is also able to log in and have the option to store favorites in a favorites bar. When storing the user's created password into our database, the data is salted and encrypted to prevent critical information from being stolen. 
+
+Another component that we have implemented is a *filter* option. This allows the user to refine the list of cards to better fit their requirements when looking for a pet.
+
+
+We intially decided to create this website as it reflects our own personal views. We all feel very strongly about the fact that there are hundreds of thousands of animals stuck in shelters, and each one of them deserves a forever home. For many people, it can be quite challenging to find an easy way to search for their next best friend, which fuelled our inspiration for this website.
+
+### Instructions
+NPM install
+Node_modules
+package_lock
+create database in mysql
+npm start
+
+### New Technologies Used
+reactstrap library
+passport.js
+
+### Challenges We Faced
+time constraints
+react is a new library we're unfamiliar with - components, grasping the fundamentals of each piece
+combining all our obtained knowledge
+
+### Stretch Goals
+favorite animal persistance - login (retrieve previous favorites)
+geolocation
+filter by location/shelter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Create React Express App
 
 ## About This Boilerplate
