@@ -49,9 +49,6 @@ export default class Login extends React.Component {
 		const username = this.state.formControls.username.value;
 		const email = this.state.formControls.email.value;
 		const password = this.state.formControls.password.value;
-		console.log("Name: " + username);
-		console.log("Email:" + email);
-		console.log("Password: " + password);
 		this.props.closeModal();
 
 		// AXIOS call to the api using sequelize
@@ -64,34 +61,28 @@ export default class Login extends React.Component {
 			password: password
 		};
 
-		//Does this need to be here?
-		if (username) {
-			fetch("/api/users", {
-				method: "POST",
-				mode: "cors",
-				cache: "no-cache",
-				credentials: "same-origin",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				redirect: "follow",
-				referrer: "no-referrer",
-				body: JSON.stringify(data)
-			})
-				.then(function(response) {
-					return response.text();
-				}, function(error) {
-					throw (error); //=> String
-				});
-
-		} else {
-			console.log("You already have an account");
-		}
+		fetch("/api/users", {
+			method: "POST",
+			mode: "cors",
+			cache: "no-cache",
+			credentials: "same-origin",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			redirect: "follow",
+			referrer: "no-referrer",
+			body: JSON.stringify(data)
+		})
+			.then(function(response) {
+				return response.text();
+			}, function(error) {
+				throw (error); //=> String
+			});
 
 	}
 
 	render() {
-		return (
+		return ( 
 			<Form>
 
 				<FormGroup>
@@ -125,7 +116,7 @@ export default class Login extends React.Component {
 				</FormGroup>
 
 				<Button onClick={this.onSubmit}>Submit</Button>
-        
+	
 			</Form>
 		);
 	}
