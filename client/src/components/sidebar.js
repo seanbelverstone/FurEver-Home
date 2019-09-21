@@ -61,13 +61,6 @@ class FilterBar extends React.Component {
   }
 
 
-
-
-
-  test() {
-    console.log(this.state.valueControl);
-  }
-
   
 renderContent = () => {
   return (
@@ -139,6 +132,7 @@ renderContent = () => {
             touch={false}
             docked={true}
             position="fixed"
+            children=""
             >
 
             {/* <button id="filterTriggerBtn" onClick={() => this.onSetSidebarOpen(true)}>

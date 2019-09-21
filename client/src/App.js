@@ -47,7 +47,7 @@ class App extends Component {
     .filter(animal => size==="all" ? true : animal.size &&animal.size.toLowerCase() === size.toLowerCase())
     
       .map(animal => (
-      <div>
+      <div key={animal.id}>
       <CharCard animal={animal} />
       </div>
       ))
