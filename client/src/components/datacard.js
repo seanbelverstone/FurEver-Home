@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./cardstyle.css";
 // import { Collapse, CardBody, Card } from 'reactstrap';
 import Collapser from "./datacardcollapser.js";
-// import {addFavorite} from "./favorites.js";
+import {appendAnimals} from "./favorites.js";
 
 const favoriteAnimals = [];
 
@@ -32,8 +32,10 @@ class CharCard extends Component {
     );
 
     //store to local storage
-    window.localStorage.setItem("favorites", JSON.stringify(favoriteAnimals));
+    window.localStorage.setItem("name", favoriteAnimals[0]);
+    window.localStorage.setItem("src", favoriteAnimals[1]);
     console.log(favoriteAnimals);
+    appendAnimals();
   }
 
   render() {

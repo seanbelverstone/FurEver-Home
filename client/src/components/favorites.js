@@ -6,15 +6,40 @@ import "./cardstyle.css";
 Once the datacard data has been stored to local storage or cookies from datacard.js, access this data on
 this file and append the name and image to the favorites bar. */
 
+const petName = window.localStorage.getItem("name");
+const petImage = window.localStorage.getItem("src");
+// console.log(displayFav);
+// const image =  JSON.parse(window.localStorage.getItem[1]);
+
+export function appendAnimals() {
+
+    var favoriteBlock = document.createElement("DIV");
+    var name = document.createElement("P");
+    var nameText = document.createTextNode(petName);
+    name.appendChild(nameText);
+    var img = document.createElement("IMG");
+    img.setAttribute("src", petImage);
+    favoriteBlock.appendChild(name);
+    favoriteBlock.appendChild(img);
+    document.getElementById("favoriteSection").appendChild(favoriteBlock);
+    console.log(favoriteBlock);
+}
+
 class FavoriteAnimals extends Component {
-  render() {
-    return (
-      <p> Hello i'm rendering! </p>
-      //access local storage
-      //.append <img> and <p> containing the src and name
-      // <div className="favoriteAnimal"></div>
-    );
-  }
+render() {
+  return (
+    <div id="favoriteSection">
+      
+    </div>
+    
+    // <div className="favoriteAnimal">
+    //   <p> Hello i'm rendering! </p>
+    // </div>
+  );
+  //access local storage
+
+  //.append <img> and <p> containing the src and name
+}
 }
 
 export default FavoriteAnimals;
