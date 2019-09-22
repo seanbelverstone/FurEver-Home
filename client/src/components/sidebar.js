@@ -1,7 +1,6 @@
 import React from "react";
 import Sidebar from "react-sidebar";
 import "./sidebar.css";
-// const axios = require("axios");
 
 class FilterBar extends React.Component {
 	constructor(props) {
@@ -27,12 +26,11 @@ class FilterBar extends React.Component {
   }
 
   submitFilters(event) {
-    // console.log("The submit has been clicked and the function has been called");
+    // This checks that the submit has been clicked and the function has been called and sets state for event;
     this.setValue(event);
   }
   
     setValue(event, filterLabel) {
-    // console.log("SetValue function has started.");
     // When the user selects Submit...
     // Scan over all of the drop-down menus to see if the value is anything OTHER THAN "all"
     
@@ -48,15 +46,6 @@ class FilterBar extends React.Component {
       }
     )
     this.props.updateValueControl(valueControl);
-
-    // console.log("valueControl is: ", valueControl);
-    // console.log("The selected Age is: ", valueControl.age);
-    // console.log("The selected Species is: ", valueControl.species);
-    // console.log("The selected Coat Length is: ", valueControl.coat);
-    // console.log("The selected Gender is: ", valueControl.gender);
-    // console.log("The selected size is: ", valueControl.size);
-
-
 
   }
 
@@ -88,12 +77,10 @@ renderContent = () => {
         <div className="selectMenus">Coat Length</div>
         <select className="selectOptions" onChange={event => this.setValue(event,"coat")}>
           <option value="all">All</option>
-          {/* <option value="hairless">Hairless</option> */}
           <option value="short">Short</option>
           <option value="medium">Medium</option>
           <option value="long">Long</option>
           <option value="wire">Wire</option>
-          {/* <option value="curly">Curly</option> */}
         </select>
 
         <div className="selectMenus">Gender</div>
@@ -109,7 +96,6 @@ renderContent = () => {
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
-          {/* <option value="extralarge">XL</option> */}
         </select>
       </div>
 
@@ -134,10 +120,6 @@ renderContent = () => {
             position="fixed"
             children=""
             >
-
-            {/* <button id="filterTriggerBtn" onClick={() => this.onSetSidebarOpen(true)}>
-            Adopt a Pet
-            </button> */}
           </Sidebar>
     );
   }

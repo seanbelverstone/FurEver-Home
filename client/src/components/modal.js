@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form} from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, Form } from "reactstrap";
 import Login from "./login";
 import "../App.css";
 
