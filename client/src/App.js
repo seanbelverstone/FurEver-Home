@@ -29,8 +29,6 @@ class App extends Component {
     axios.get("api/pets").then(response => response.data)
     .then((data) => {
       this.setState({ animals: data.animals })
-      // console.log(this.state.animals);
-      // console.log(this.state.animals.attributes);
     });
   };
 
