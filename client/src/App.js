@@ -1,11 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import Jumbotron from "./components/jumbotron";
 import "./App.css";
-// import animals from "../src/animals.json";
 import CharCard from "./components/datacard.js";
 import axios from "axios";
-// import CardBodyInfo from "./components/CardBodyInfo.js";
 import FilterBar from "./components/sidebar.js";
 import FavBar from "./components/favbar.js";
 
@@ -63,11 +60,6 @@ class App extends Component {
         <div className="charCard">
           {/* Before we even render our animals, we are checking whether the Photos key exists for that animal, AND whether that photos array is populated. If both are true, then display the animal card as normal. */}
           {this.renderAnimals()}
-          {/* {this.state.animals.filter(animal => animal.photos.length).map(animal => (
-            <div>
-            <CharCard animal={animal} />
-            </div>
-          ))} */}
         </div>
       </React.Fragment>
     

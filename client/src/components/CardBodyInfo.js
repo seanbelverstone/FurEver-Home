@@ -1,13 +1,6 @@
 import React from "react";
 
 const CardBodyInfo = (props) => {
-  // console.log(props.animal.attributes);
-  // if(props.animal.attributes.spayed_neutered === true) {
-  //   return "Yes";
-  // }
-
-
-
     return (
       <React.Fragment>
         <li>

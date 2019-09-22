@@ -51,6 +51,7 @@ export default class Login extends React.Component {
 		const password = this.state.formControls.password.value;
 		this.props.closeModal();
 
+		//STRETCH GOAL
 		// AXIOS call to the api using sequelize
 		//if user is in database, don't do anything right now
 		//if user is not in the database, create new user 
@@ -79,7 +80,7 @@ export default class Login extends React.Component {
 				throw (error); //=> String
 			});
 
-    }
+	}
 
 	render() {
 		return ( 

@@ -39,20 +39,6 @@ element.style {
     top: "0";
 }
 
-/* sidebar {
-    margin: "350px 0 0 0";
-    background-color: orange;
-    color: "white";
-    padding: "15px";
-    overflow: "hidden";
-    height: "700px";
-    width: "300px";
-    z-Index: "2";
-    position: "relative";
-    top: "0";
-}  */
-
-
 #selectMenus {
     font-size: 20px;
     padding-left: 15px;

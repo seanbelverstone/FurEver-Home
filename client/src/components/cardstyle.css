@@ -9,14 +9,12 @@
   padding-bottom:50px;
 }
 .charCard {
-    /* background-color:green; */
     left: 15%;
     position: absolute;
 }
 
 /* animalCard CSS */
 .animalCard {
-  /* background: yellow; */
     background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Download-High-Res-Photoshop-Sublte-Vector-Patterns.jpg");
     background-size:cover;
     display: inline-block;
@@ -38,7 +36,6 @@
 }
 .animalCard > .content > ul {
     list-style-type: none;
-    /* border: 5px solid red; */
 }
 
 .animalCard > .img-container {
@@ -46,7 +43,6 @@ height: 300px;
     width: auto;
     overflow: hidden;
     text-align: center;
-    /* background: darkslategray; */
     background-repeat: round;
     float: left;
     clear: left;
@@ -78,9 +74,6 @@ height: 300px;
 .animalCard > .content > ul > li {
   margin-top: 18px;
 }
-
-
-
 
 .animalCard > .remove {
   color: #ff1744;
