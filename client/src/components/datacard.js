@@ -15,7 +15,7 @@ class CharCard extends Component {
       collapse: false
       // animal:props.animal
     };
-    console.log(props.animal);
+    // console.log(props.animal);
 
     // console.log("HELLO");
     // console.log(props.animal.attributes);

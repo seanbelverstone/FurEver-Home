@@ -10,21 +10,11 @@ class FilterBar extends React.Component {
       sidebarOpen: true,
 
       valueControl: {
-        species: {
-          value: ""
-        },
-        age: {
-          value: ""
-        },
-        coatLength: {
-          value: ""
-        },
-        gender: {
-          value: ""
-        },
-        size: {
-          value: ""
-        }
+        species: "all",
+        age: "all",
+        coat: "all",
+        gender: "all",
+        size: "all"
       }
     };
 
@@ -37,84 +27,39 @@ class FilterBar extends React.Component {
   }
 
   submitFilters(event) {
-    console.log("The submit has been clicked and the function has been called");
+    // console.log("The submit has been clicked and the function has been called");
     this.setValue(event);
   }
   
-  setValue(event) {
-    console.log("SetValue function has started.");
+    setValue(event, filterLabel) {
+    // console.log("SetValue function has started.");
     // When the user selects Submit...
     // Scan over all of the drop-down menus to see if the value is anything OTHER THAN "all"
     
     // If the value is something other than "all" (e.g., if the user selected a search parameter) we take that 
     // value and we do setState to store it into the searchQueries array.
-    // var testElements = document.getElementByClassName
-    // if ((getElementsByClassName(selectOptions)).val() !== "all") {
-      
-    //   searchQueries = this.state.searchQueries.concat(this.option.value);
-    //   console.log("SEARCHQUERIES IS NOW: ", searchQueries);
 
-  
+    let valueControl = this.state.valueControl;
+
+    valueControl[filterLabel] = event.target.value;
     
     this.setState({
-      valueControl: {
-        species: event.target.value,
-        age: event.target.value,
-        coatLength: event.target.value,
-        gender: event.target.value,
-        size: event.target.value
+      valueControl
       }
-    })
+    )
+    this.props.updateValueControl(valueControl);
 
-    console.log(this.state.valueControl);
-
-    console.log("The selected Age is: ", this.state.age);
-  
-    console.log("The selected Species is: ", this.state.species);
-
-    console.log("The selected Coat Length is: ", this.state.coatLength);
-
-    console.log("The selected Gender is: ", this.state.gender);
-
-    console.log("The selected size is: ", this.state.size);
-
-
-    // Here we begin what would be the filterPets function.
-
-
-
-
-
-
-    // ------------------------------------------------------------------------
-
-
-
-  // componentDidMount() {
-  //   axios.get("api/pets").then(response => response.data)
-  //   .then((data) => {
-  //     this.setState({ animals: data.animals })
-  //     console.log(this.state.animals);
-  //     // console.log(this.state.animals.attributes);
-  //   });
-  // };
-
-
-
-
-    // ------------------------------------------------------------------------
+    // console.log("valueControl is: ", valueControl);
+    // console.log("The selected Age is: ", valueControl.age);
+    // console.log("The selected Species is: ", valueControl.species);
+    // console.log("The selected Coat Length is: ", valueControl.coat);
+    // console.log("The selected Gender is: ", valueControl.gender);
+    // console.log("The selected size is: ", valueControl.size);
 
 
 
   }
 
-
-
-
-
-  test() {
-    console.log(this.state.valueControl);
-  }
 
   
 renderContent = () => {
@@ -125,56 +70,46 @@ renderContent = () => {
         <div id="filterTitle">Adopt a Pet</div>
         
         <div className="selectMenus">Species</div>
-        <select className="selectOptions" onChange={this.setValue}>
+        <select className="selectOptions" onChange={event => this.setValue(event,"species")}>
           <option value="all">All</option>
-          <option value="dogs">Dogs</option>
-          <option value="cats">Cats</option>
+          <option value="dog">Dogs</option>
+          <option value="cat">Cats</option>
         </select>
 
         <div className="selectMenus">Age</div>
-        <select className="selectOptions" onChange={this.setValue}>
+        <select className="selectOptions" onChange={event => this.setValue(event,"age")}>
           <option value="all">All</option>
-          <option 
-            value="puppy">Puppy</option>
-          <option
-            value="young">Young</option>
-          <option 
-            value="adult">Adult</option>
-          <option 
-            value="senior">Senior</option>
+          <option value="puppy">Puppy</option>
+          <option value="young">Young</option>
+          <option value="adult">Adult</option>
+          <option value="senior">Senior</option>
         </select>
 
-        <div className="selectMenus"
-                onChange={this.setValue}>
-                  Coat Length</div>
-        <select className="selectOptions">
+        <div className="selectMenus">Coat Length</div>
+        <select className="selectOptions" onChange={event => this.setValue(event,"coat")}>
           <option value="all">All</option>
-          <option value="hairless">Hairless</option>
+          {/* <option value="hairless">Hairless</option> */}
           <option value="short">Short</option>
           <option value="medium">Medium</option>
           <option value="long">Long</option>
           <option value="wire">Wire</option>
-          <option value="curly">Curly</option>
+          {/* <option value="curly">Curly</option> */}
         </select>
 
-        <div className="selectMenus"
-                onChange={this.setValue}>
-                  Gender</div>
-        <select className="selectOptions">
+        <div className="selectMenus">Gender</div>
+        <select className="selectOptions" onChange={event => this.setValue(event,"gender")}>
           <option value="all">All</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
 
-        <div className="selectMenus"
-              onChange={this.setValue}>
-                Size</div>
-        <select className="selectOptions">
+        <div className="selectMenus" >Size</div>
+        <select className="selectOptions" onChange={event => this.setValue(event,"size")}>
           <option value="all">All</option>
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
-          <option value="extralarge">XL</option>
+          {/* <option value="extralarge">XL</option> */}
         </select>
       </div>
 
@@ -197,6 +132,7 @@ renderContent = () => {
             touch={false}
             docked={true}
             position="fixed"
+            children=""
             >
 
             {/* <button id="filterTriggerBtn" onClick={() => this.onSetSidebarOpen(true)}>
